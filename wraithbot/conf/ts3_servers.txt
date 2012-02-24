@@ -1,0 +1,62 @@
+#
+# This is the list of ts3 servers that the bot can query
+#
+# client_port is what you use to connect with the GUI
+# query_port is the server instance specific port
+#            used for the Server Query protocol
+#
+# You need these permissions in order to use it:
+#
+# In the GUI, Permissions -> Server Groups -> Guest
+# Under Virtual Server -> Information, add these:
+#    view server info
+#    view server connection info (really needed?)
+#    view existing channels
+#    view list of clients online
+#
+# You can use telnet to view the output interactively.
+# Here's an example with iCu's TS3.  The parts in [[...]]
+# were my input.
+#
+# host$ [[telnet 173.45.231.242 10011]]
+# Trying 173.45.231.242...
+# Connected to 173.45.231.242.
+# Escape character is '^]'.
+# TS3
+# Welcome to the TeamSpeak 3 ServerQuery interface, type "help" for a list of commands and "help <command>" for information on a specific command.
+# [[use port=9987]]
+# error id=0 msg=ok
+# [[clientlist]]
+# ... list of clients here (omitted)
+# error id=0 msg=ok
+# [[quit]]
+# error id=0 msg=ok
+# Connection closed by foreign host.
+# host$
+#
+# If you get an error message about invalid permissions, tell the server admin
+# to see the toplevel README in this project.  It shows the necessary permissions.
+#
+# The default query port is 10011.  For gameservers.com, it is 9100.
+
+# name         IP          client_port   query_port
+ven         66.55.149.29       9160         9100
+iCu*      173.45.231.242       9987        10011
+b00bs     188.138.48.106       9987        10011
+NRG       207.192.73.103       9987        10011
+eVo       216.52.143.226       9987        10011
+GlaD      209.247.83.121       9180         9100
+no          68.71.61.194       9987        10011
+LKBF       66.55.142.230       9164         9100
+NN       209.246.143.232       9122         9100
+syh-SA     66.109.21.204       9990        10011
+alpha     69.164.206.176       9987        10011
+zL         63.210.145.16       9110         9100
+pugbot    208.93.223.132       9987        10011
+zod          63.209.37.2       9131         9100
+
+# Down?
+#urteast    74.207.235.61       9987        10011
+
+# Insufficient permissions on these.
+#xil       173.226.99.250       9988        10011
