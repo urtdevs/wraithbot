@@ -7,25 +7,15 @@
 #
 # Don't keep too many in here because we have to output to IRC.
 
-iCu*             216.52.143.168:27960
-#UrT East          74.207.235.61:27961
-UrT East        173.230.135.245:27961
+#UrT East        173.230.135.245:27961
+WIP TS		  66.55.154.231:27960
 Spray & Pray      64.94.101.216:27960
 fidelitas            46.4.21.68:30100
-=jF=              81.19.219.168:27970
 Casatown          85.25.150.135:29500
 Res Casatown      85.10.207.173:29600
-#THC              68.232.174.110:27960
-eVo              216.52.143.226:27962
-NRG              68.232.169.215:27960
-TR Turk          195.137.222.81:27990
 Z BotB          208.167.243.205:27960
 West Z Best           8.6.15.92:27960
-hsf pro            68.71.61.194:27967
 Call of Nooby     64.94.101.217:27960
-#Noobs Gone Wild  208.93.223.134:27966
-Veneration        66.55.137.164:27960
+Pound Cake       108.174.51.114:27960
 Nooby             64.94.101.217:27960
 b00bs downtown    69.164.210.60:27967
-unRestricted       96.8.112.100:27960
-# Temp UrT East      64.74.97.240:27961

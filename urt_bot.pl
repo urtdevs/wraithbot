@@ -155,19 +155,22 @@ for my $type ( $AUTH, $TS3_AUTH ) {
     $type->add_public_channel( "#team-veneration", 1 );
     $type->add_public_channel( "#icu",             0 );
     $type->add_public_channel( "#noclan",          1 );
-    $type->add_public_channel( "#esl.urt",         1 );
-    $type->add_public_channel( "#unrestricted",    1 );
+    $type->add_private_channel("#venpriv",      1 );
+    $type->add_public_channel( "#dirf!",           1 );
+
 
   # Testing channel
-    $type->add_public_channel( "#urtpub",          0 );
-
+    $type->add_public_channel( "#x}",              0 );
+	
   # These are special users that are always trusted.  Since they are +x
   # modes, it requires that someone logs in with either my account, Megan's or
   # the bot's.
     $type->add_user( q{undeadzy},  q{~undeadzy@undeadzy.undead.gamesurge} );
     $type->add_user( q{wraithbot}, q{~wraithbot@wraithbot.bot.gamesurge} );
     $type->add_user( q{callisto`}, q{callisto@Megan.idle-whore.gamesurge} );
-    $type->add_user( q{unR|kbar}, q{~jahPahr5@kbar.engineer.gamesurge} );
+    $type->add_user( q{[herp]bot}, q{~bot@pz.rapedidiot.com} );
+    $type->add_user( q{paulnewman}, q{~kbar@pz.rapedidiot.com} );
+    $type->add_user( q{paulnewman}, q{kbar@pz.rapedidiot.com} );
 }
 
 my $VEN_AUTH = Util::IRC::Auth->new();
