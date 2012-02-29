@@ -157,11 +157,10 @@ for my $type ( $AUTH, $TS3_AUTH ) {
     $type->add_public_channel( "#noclan",          1 );
     $type->add_public_channel( "#esl.urt",         1 );
     $type->add_public_channel( "#unrestricted",    1 );
-    $type->add_private_channel("#ftwgl-team",      1 );
 
   # Testing channel
-    $type->add_public_channel( "#x}",              0 );
-	
+    $type->add_public_channel( "#urtpub",          0 );
+
   # These are special users that are always trusted.  Since they are +x
   # modes, it requires that someone logs in with either my account, Megan's or
   # the bot's.
