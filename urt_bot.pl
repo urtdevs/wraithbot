@@ -151,26 +151,39 @@ my $AUTH = Util::IRC::Auth->new();
 my $TS3_AUTH = Util::IRC::Auth->new( { delay => 2 } );
 
 for my $type ( $AUTH, $TS3_AUTH ) {
-    $type->add_public_channel( "#ftwgl",           1 );
-    $type->add_public_channel( "#team-veneration", 1 );
+    $type->add_public_channel( "#ftwgl",           0 );
+    $type->add_public_channel( "#team-veneration", 0 );
     $type->add_public_channel( "#icu",             0 );
-    $type->add_public_channel( "#noclan",          1 );
+    $type->add_public_channel( "#noclan",          0 );
+    $type->add_public_channel( "#wip",             0 );
     $type->add_private_channel("#venpriv",      1 );
-    $type->add_public_channel( "#dirf!",           1 );
+    $type->add_public_channel( "#dirf!",           0 );
+    $type->add_public_channel( "#urtdevs",	   0 );
+    $type->add_public_channel("#urtbr",		   0 );
+    $type->add_public_channel("#nvm.urt",          0 );
+    $type->add_public_channel("#high5",		   0 );
+    $type->add_public_channel("#urt",		   0 );
+    $type->add_public_channel("##uiuc",            0 );
 
 
   # Testing channel
-    $type->add_public_channel( "#x}",              0 );
+    $type->add_public_channel( "#x}",              1 );
 	
   # These are special users that are always trusted.  Since they are +x
   # modes, it requires that someone logs in with either my account, Megan's or
   # the bot's.
     $type->add_user( q{undeadzy},  q{~undeadzy@undeadzy.undead.gamesurge} );
-    $type->add_user( q{wraithbot}, q{~wraithbot@wraithbot.bot.gamesurge} );
+    $type->add_user( q{[herp]bot}, q{wraith@69.85.89.101} );
     $type->add_user( q{callisto`}, q{callisto@Megan.idle-whore.gamesurge} );
     $type->add_user( q{[herp]bot}, q{~bot@pz.rapedidiot.com} );
-    $type->add_user( q{paulnewman}, q{~kbar@pz.rapedidiot.com} );
-    $type->add_user( q{paulnewman}, q{kbar@pz.rapedidiot.com} );
+    $type->add_user( q{kbar}, q{~IKaATkd1@haha.rapedidiot.com} );
+    $type->add_user( q{paulnewman}, q{jchen@haha.rapedidiot.com} );
+    $type->add_user( q{evilelf}, q{~fuzzball@mx.ftwgl.com} );
+    $type->add_user( q{brejnless}, q{webchat@brejnless.users.quakenet.org} );
+    $type->add_user( q{idealevil}, q{jts@elusive.precision} );
+    $type->add_user( q{KBARKA}, q{jchen@kbar.users.quakenet.org} );
+    $type->add_user( q{nikkerz}, q{offensive@4lulz.org} );
+    $type->add_user( q{kbar}, q{haeuaehu@at.least.we.killed.cheerio} );
 }
 
 my $VEN_AUTH = Util::IRC::Auth->new();
@@ -983,7 +996,7 @@ sub msg_public_own_servers {
     my ( $server, $data, $target ) = @_;
 
     return handle_actions( $server, $data, q{wraithbot},
-        q{~wraithbot@wraithbot.bot.gamesurge},
+        q{wraith@69.85.89.101},
         $target, 0 );
 }
 
@@ -994,7 +1007,7 @@ sub bot_cmd {
 
     return handle_actions(
         $server, $cmd . q{ } . $args,
-        q{wraithbot}, q{~wraithbot@wraithbot.bot.gamesurge},
+        q{wraithbot}, q{wraith@69.85.89.101},
         $target, 1
     );
 }
